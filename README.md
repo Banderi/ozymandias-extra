@@ -1,1 +1,0 @@
-# ozymandias-pharaoh-wiki
