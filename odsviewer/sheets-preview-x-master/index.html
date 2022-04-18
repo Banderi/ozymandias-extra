@@ -1,0 +1,147 @@
+<html>
+<head>
+  <title>Spreadsheet Preview</title>
+  <meta name="author" content="taikom">
+	<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <style type="text/css" media="screen">
+  html, #main {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+  }
+  body {
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !important;
+      color: #393939;
+      background-color: #fff;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1.5;
+  }
+  .handsontable table {
+      font-size:90%;
+  }
+  #drop{
+  	border:2px dashed #bbb;
+  	-moz-border-radius:5px;
+  	-webkit-border-radius:5px;
+  	border-radius:10px;
+  	padding:25px;
+  	text-align:center;
+  	font-size:12pt;
+    color:#bbb;
+    line-height:100px;
+    margin:20px;
+  }
+  
+  /* toggle button */
+  .toggle-buttons {
+    display: flex;
+  }
+  
+  .toggle-buttons.vertical {
+    flex-direction: column;
+  }
+  
+  .toggle-buttons label {
+    display: flex;
+    position: relative;
+  }
+  
+  .toggle-buttons [type=radio],
+  .toggle-buttons [type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .toggle-buttons .button {
+    z-index: 1;
+  }
+  
+  .toggle-buttons.vertical .button {
+    width: 100%;
+  }
+  
+  .toggle-buttons:not(.vertical) :not(:first-child) .button {
+    border-left: 1px solid #567;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .toggle-buttons:not(.vertical) :not(:last-child) .button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .toggle-buttons.vertical :not(:first-child) .button {
+    border-top: 1px solid #567;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+  .toggle-buttons.vertical :not(:last-child) .button {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .toggle-buttons :checked + .button {
+    background-color: #345;
+  }
+  
+  .toggle-buttons :disabled + .button {
+    cursor: not-allowed;
+    opacity: .6;
+    color: #def;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: .5em 1em;
+    border-radius: 6px 6px 0px 0px;
+    text-align: center;
+    color: #eff;
+    background-color: #678;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #567;
+  }
+  
+  .button:disabled {
+    cursor: not-allowed;
+    opacity: .6;
+    color: #def;
+  }
+  
+  
+  
+    </style>
+  <script src="xlsx.full.min.js"></script>
+  <script src="handsontable.full.min.js"></script>
+  <link rel="stylesheet" media="screen" href="handsontable.full.min.css">
+  <link rel="stylesheet" media="screen" href="mk-spinners.min.css">
+  
+</head>
+<body>
+
+<div id="sheets">
+  </div>
+  <div id="main">
+    <div id="drop">Drop a spreadsheet here.<br/>
+      <button id="openfile">Open a file</button>
+    </div>
+  </div>
+  <script src="index.js" data-main="main" type="text/javascript"></script>
+
+</body>
+</html>
