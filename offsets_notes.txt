@@ -172,6 +172,17 @@ game at the right time
 170 - very large
 226 - enormous
 
+7838C8 (0)
+783908 (40)
+783948 (80)
+783988 (..)
+...
+783C88 (3C0) = 15 fields
+
+176 48 12464  203 50 13003
+178 48 12466  205 50 13005
+137 54 13961  164 56 14500
+
 ==================
 
 first one in the list is always null
