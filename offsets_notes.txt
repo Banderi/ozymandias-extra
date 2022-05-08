@@ -165,6 +165,34 @@ game at the right time
 
 ==================
 
+The figure routing works like this:
+
+- there is a couple global grid caches that update
+every so often, containing the terrain checks for
+different types of figures:
+  - citizen
+  - noncitizen
+  - water
+  - wall
+
+- when asking for a PATH, the game will check if there
+is a clear path from point A to B using these caches
+and will store the calculate path in cache
+
+- if a clear path is confirmed to exist, the path is
+set using the cached path_id
+
+- figures will update their path progress, and remove
+the path when they're at the end of it
+
+- figures will ALSO constantly check if the terrain is
+passable, independently if they're roaming or following
+a path! this is to prevent paths being set in stone
+forever and citizens casually walking through buildings
+or flooded plains!
+
+==================
+
 ?? - tiny
 84 - small
 112 - average

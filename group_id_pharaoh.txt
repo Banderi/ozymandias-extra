@@ -440,7 +440,7 @@ INFO: data/Pharaoh_General.sg3 group 56 -> id 2255
 INFO: data/Pharaoh_General.sg3 group 57 -> id 887
 INFO: data/Pharaoh_General.sg3 group 58 -> id 2381
 INFO: data/Pharaoh_General.sg3 group 59 -> id 1087
-INFO: data/Pharaoh_General.sg3 group 60 -> id 1527
+INFO: data/Pharaoh_General.sg3 group 60 -> id 1527 resource: papyrus (3)
 INFO: data/Pharaoh_General.sg3 group 61 -> id 2297
 INFO: data/Pharaoh_General.sg3 group 62 -> id 1174
 INFO: data/Pharaoh_General.sg3 group 63 -> id 1160
@@ -578,19 +578,19 @@ INFO: data/Pharaoh_General.sg3 group 194 -> id 2279
 INFO: data/Pharaoh_General.sg3 group 195 -> id 1557
 INFO: data/Pharaoh_General.sg3 group 196 -> id 931
 INFO: data/Pharaoh_General.sg3 group 197 -> id 932
-INFO: data/Pharaoh_General.sg3 group 198 -> id 1505
-INFO: data/Pharaoh_General.sg3 group 199 -> id 1510
-INFO: data/Pharaoh_General.sg3 group 200 -> id 1515
-INFO: data/Pharaoh_General.sg3 group 201 -> id 1499
-INFO: data/Pharaoh_General.sg3 group 202 -> id 1517
-INFO: data/Pharaoh_General.sg3 group 203 -> id 1532
-INFO: data/Pharaoh_General.sg3 group 204 -> id 1497
-INFO: data/Pharaoh_General.sg3 group 205 -> id 1492 WEIRD resource icons
-INFO: data/Pharaoh_General.sg3 group 206 -> id 1522
-INFO: data/Pharaoh_General.sg3 group 207 -> id 1501
-INFO: data/Pharaoh_General.sg3 group 208 -> id 1503
-INFO: data/Pharaoh_General.sg3 group 209 -> id 1530
-INFO: data/Pharaoh_General.sg3 group 210 -> id 1508
+INFO: data/Pharaoh_General.sg3 group 198 -> id 1505 resource: beer (3)
+INFO: data/Pharaoh_General.sg3 group 199 -> id 1510 resource: linen (5)
+INFO: data/Pharaoh_General.sg3 group 200 -> id 1515 resource: gems (2)
+INFO: data/Pharaoh_General.sg3 group 201 -> id 1499 resource: weapons (2)
+INFO: data/Pharaoh_General.sg3 group 202 -> id 1517 resource: wood (5)
+INFO: data/Pharaoh_General.sg3 group 203 -> id 1532 resource: copper (2)
+INFO: data/Pharaoh_General.sg3 group 204 -> id 1497 resource: straw (2)
+INFO: data/Pharaoh_General.sg3 group 205 -> id 1492 resource: gamemeat (5)
+INFO: data/Pharaoh_General.sg3 group 206 -> id 1522 resource: reeds (5)
+INFO: data/Pharaoh_General.sg3 group 207 -> id 1501 resource: clay (2)
+INFO: data/Pharaoh_General.sg3 group 208 -> id 1503 resource: barley (2)
+INFO: data/Pharaoh_General.sg3 group 209 -> id 1530 resource: chariots (2)
+INFO: data/Pharaoh_General.sg3 group 210 -> id 1508 resource: flax (2)
 INFO: data/Pharaoh_General.sg3 group 211 -> id 2014
 INFO: data/Pharaoh_General.sg3 group 212 -> id 743 tiny arrow buttons
 INFO: data/Pharaoh_General.sg3 group 213 -> id 2325

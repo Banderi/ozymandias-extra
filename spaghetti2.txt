@@ -1,0 +1,87 @@
+// rearrange_CHILD1(...)
+while (first < last):
+
+    A = first
+    B = first + 1
+
+    while (B <= last):
+	if (compare(B, A) > 1): //A is more ev.
+	    A++
+	B++
+    swap(A, last)
+    last--
+
+///////////////////////////////
+
+first@si = [0]
+last@bx = [19]
+j = 0
+cache_first[30]
+cache_last[30]
+
+REDO
+size = last@si - first@bx + 1
+//total array size
+
+if (size > 8): {
+    swap(first@bx, size/2)
+
+    A = first@bx
+    B@di = last@si + 1
+
+    LOOP1
+// finds the first house better than
+// than the one at the top!
+    do {
+	A++
+	if (A > last@si)
+	    break;
+    } while (compare(A, first@bx) < 1)
+
+    LOOP2
+// finds the last house worse than
+// the one at the top!
+    do {
+	B@di--
+	if (B@di <= first@bx):
+	    break;
+    } while
+     (compare(B@di, first@bx) > -1)
+
+    if (A <= B@di):
+	swap(A, B@di)
+	goto LOOP1
+    swap(first@bx, B@di)
+
+    if (B@di - 1 - first@bx
+	         < last@si - A): {
+	if (A < last@si):
+	    cache_first[j] = A
+	    cache_last[j] = last@si
+	    j++
+	if (first@bx + 1 < B@di):
+	    last@si = B@di - 1
+	    goto REDO
+    } else: {
+	if (first@bx + 1 < B@di):
+	    cache_first[j] = first@bx
+	    cache_last[j] = B@di - 1
+	    j++
+	first@bx = A
+	if (A < last@si)
+	    goto REDO
+    }
+} else:
+    rearrange_CHILD1(first@bx, last@si)
+FINAL:
+    j--
+    if (j < 0):
+	return
+    first@bx = cache_first[j]
+    last@si = cache_last[j]
+    goto REDO
+
+
+
+
+

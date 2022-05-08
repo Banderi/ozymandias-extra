@@ -1,0 +1,88 @@
+// rearrange_CHILD1(...)
+while (first < last):
+
+    A = first
+    B = first + 1
+
+    while (B <= last):
+	if (compare(B, A) > 1): //A is more ev.
+	    A++
+	B++
+    swap(A, last)
+    last--
+
+///////////////////////////////
+
+first@si = [0]
+last = [19]
+j = 0
+cache_first[30]
+cache_last[30]
+REDO
+size = last - first + 1 //total array size
+if (size > 8):
+    swap(first, size/2)
+
+    A = first@si
+    B@di = last + 1
+    LOOP1
+// finds the first house better than
+// than the one at the top!
+	A++
+	if (A <= last):
+
+	    >>> code_r0x00561cac <<<
+	    if (compare(A, first@si)
+	        < 1):
+		goto LOOP1
+	    else:
+		goto LOOP1END
+	    >>> ---------------- <<<
+
+	else:
+	    goto LOOP1END
+    LOOP1END
+	do {
+	    B@di--
+	    if (B@di <= first@si):
+		break
+	    r = compare(B@di, first@si)
+	} while (r > -1)
+	
+	if (A <= B@di):
+	    swap(A, B@di)
+	    goto LOOP1
+	swap(first, B@di)
+	cached_A = A
+	if (B@di - 1 - first@si
+	         < last - A) {
+	    if (A < last):
+		cache_first[j] = A
+		cache_last[j] = last
+		j++
+	    if (first@si + 1 < B@di):
+		last = B@di - 1
+		goto REDO
+	} else {
+	    if (first + 1 < B):
+		cache_first[j] = first
+		cache_last[j] = B - 1
+		j++
+	    first = cached_A
+	    if (cached_A < last)
+		goto REDO
+	}
+else:
+    rearrange_CHILD1(first, last)
+FINAL:
+    j--
+    if (j < 0):
+	return
+    first = cache_first[j]
+    last = cache_last[j]
+    goto REDO
+
+
+
+
+
