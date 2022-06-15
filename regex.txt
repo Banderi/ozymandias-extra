@@ -217,6 +217,8 @@ grid_array_set($2, $4, $6));
 
 
 
+(\n\s*)(<Address>)(\[)(.*?)(\]\+)(.*?)(<\/Address>)
+$1$2$4$7$1<Offsets>$1  <Offset>$6</Offset>$1</Offsets>
 
 
 

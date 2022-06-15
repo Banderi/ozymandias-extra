@@ -1,0 +1,28 @@
+**** 004BE57F
+eax = MONTH * 16
+ST0 = 2 * 9792 = 19584
+eax += DAY
+edx = TICK
+edi = eax * 16
+edi += eax
+ebx = edi+edx
+
+
+
+
+
+edi = 107 (eax)
+edi = edi * 16 ---> 1712
+edi += 107 (eax) ---> 1819
+eax = 9792
+ebx = abs_ticks ---> 1841
+
+ecx = ebx + 2 * edi ---> 5479
+eax += ecx ---> 15271
+eax = (eax + 1) / 25 ---> 610
+
+eax = 15271 / 25
+ebx = 626 (start)
+edi = 610 (eax)
+edx = 626 (ebx)
+edx -= edi ---> 16

@@ -1,0 +1,10 @@
+bound = 0
+arr = {100, 3, 80, 5, 60, 10, 40, 15, 20, 30, 0, 15};
+for i=0,12:
+	bound += 2
+	if (rand_iv1_15 % 99 + 1) < bound:
+		quality = arr[i]
+next_quality += quality
+if next_quality > 99:
+	next_quality = 100
+	
