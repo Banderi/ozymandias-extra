@@ -1,0 +1,264 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/Main.gd" type="Script" id=1]
+[ext_resource path="res://fonts/basis33.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scripts/DataTable.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 5.0
+content_margin_right = 5.0
+bg_color = Color( 0.160784, 0.156863, 0.172549, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+content_margin_right = 5.0
+
+[node name="Main" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0901961, 0.0901961, 0.0980392, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Control" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 25.0
+margin_bottom = -24.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="HSplit0" type="HBoxContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSplit1" type="HSplitContainer" parent="Control/HSplit0"]
+margin_right = 298.0
+margin_bottom = 551.0
+size_flags_horizontal = 3
+split_offset = 350
+
+[node name="VSplit1" type="VSplitContainer" parent="Control/HSplit0/HSplit1"]
+margin_right = 286.0
+margin_bottom = 551.0
+split_offset = 400
+
+[node name="TextEdit" type="TextEdit" parent="Control/HSplit0/HSplit1/VSplit1"]
+visible = false
+margin_right = 351.0
+margin_bottom = 200.0
+text = "a
+b
+c: asdasd
+	asdasd
+asdasd
+dshshfd
+aeh:
+	asdads
+	asdasd
+	hmmm
+	lol
+asdasd"
+readonly = true
+highlight_current_line = true
+show_line_numbers = true
+bookmark_gutter = true
+fold_gutter = true
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+minimap_draw = true
+
+[node name="ChunkTable" type="Tree" parent="Control/HSplit0/HSplit1/VSplit1"]
+margin_right = 286.0
+margin_bottom = 401.0
+custom_constants/vseparation = 1
+custom_constants/draw_relationship_lines = 1
+custom_fonts/title_button_font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+allow_reselect = true
+hide_root = true
+
+[node name="DataTable" type="Tree" parent="Control/HSplit0/HSplit1/VSplit1"]
+margin_top = 413.0
+margin_right = 286.0
+margin_bottom = 551.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 1
+custom_fonts/title_button_font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+columns = 3
+column_titles_visible = true
+allow_search = false
+hide_folding = true
+hide_root = true
+script = ExtResource( 3 )
+
+[node name="HBox" type="ScrollContainer" parent="Control/HSplit0/HSplit1/VSplit1"]
+visible = false
+margin_top = 212.0
+margin_right = 200.0
+margin_bottom = 600.0
+scroll_vertical_enabled = false
+
+[node name="Control" type="Control" parent="Control/HSplit0/HSplit1"]
+margin_left = 298.0
+margin_right = 298.0
+margin_bottom = 551.0
+mouse_filter = 2
+
+[node name="HSplit2" type="HSplitContainer" parent="Control/HSplit0"]
+margin_left = 302.0
+margin_right = 900.0
+margin_bottom = 551.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+split_offset = 300
+
+[node name="SchemaMemoryTable" type="Tree" parent="Control/HSplit0/HSplit2"]
+margin_right = 301.0
+margin_bottom = 551.0
+custom_constants/vseparation = 1
+custom_fonts/title_button_font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+columns = 5
+column_titles_visible = true
+allow_reselect = true
+hide_folding = true
+hide_root = true
+select_mode = 1
+
+[node name="VSplit2" type="VSplitContainer" parent="Control/HSplit0/HSplit2"]
+margin_left = 313.0
+margin_right = 598.0
+margin_bottom = 551.0
+split_offset = 400
+
+[node name="SaveTable" type="Tree" parent="Control/HSplit0/HSplit2/VSplit2"]
+margin_right = 285.0
+margin_bottom = 401.0
+custom_constants/vseparation = 1
+custom_fonts/title_button_font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+hide_folding = true
+hide_root = true
+
+[node name="SchemaTable" type="Tree" parent="Control/HSplit0/HSplit2/VSplit2"]
+margin_top = 413.0
+margin_right = 285.0
+margin_bottom = 551.0
+custom_constants/vseparation = 1
+custom_fonts/title_button_font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+column_titles_visible = true
+allow_reselect = true
+hide_folding = true
+hide_root = true
+select_mode = 1
+
+[node name="Control2" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 25.0
+margin_bottom = -24.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="unk10a" type="Label" parent="Control2"]
+margin_left = 48.0
+margin_top = -23.0
+margin_right = 223.0
+margin_bottom = 124.0
+custom_constants/line_spacing = -5
+custom_fonts/font = ExtResource( 2 )
+text = "asdasd"
+
+[node name="unk10b" type="Label" parent="Control2"]
+margin_left = 583.0
+margin_top = -23.0
+margin_right = 758.0
+margin_bottom = 124.0
+custom_constants/line_spacing = -5
+custom_fonts/font = ExtResource( 2 )
+text = "asdasd"
+
+[node name="Control3" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 25.0
+margin_bottom = -24.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="test" type="Label" parent="Control3"]
+margin_left = 23.0
+margin_top = -23.0
+margin_right = 198.0
+margin_bottom = 124.0
+custom_constants/line_spacing = -5
+custom_fonts/font = ExtResource( 2 )
+text = "asdasd"
+
+[node name="test_b" type="Label" parent="Control3"]
+margin_left = 23.0
+margin_top = -23.0
+margin_right = 198.0
+margin_bottom = 124.0
+custom_constants/line_spacing = -5
+custom_fonts/font = ExtResource( 2 )
+text = "asdasd"
+
+[node name="test2" type="Label" parent="Control3"]
+margin_left = 23.0
+margin_top = 308.0
+margin_right = 198.0
+margin_bottom = 455.0
+custom_constants/line_spacing = -5
+custom_fonts/font = ExtResource( 2 )
+text = "asdasd"
+
+[node name="test3" type="Label" parent="Control3"]
+margin_left = 604.0
+margin_top = -24.0
+margin_right = 779.0
+margin_bottom = 123.0
+custom_constants/line_spacing = -5
+custom_fonts/font = ExtResource( 2 )
+text = "asdasd"
+
+[node name="LogLabel" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -21.0
+custom_fonts/font = ExtResource( 2 )
+custom_styles/normal = SubResource( 1 )
+valign = 1
+
+[node name="LogLabel2" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -21.0
+custom_fonts/font = ExtResource( 2 )
+custom_styles/normal = SubResource( 2 )
+align = 2
+valign = 1
+
+[connection signal="cell_selected" from="Control/HSplit0/HSplit1/VSplit1/ChunkTable" to="." method="_on_ChunkTable_cell_selected"]
+[connection signal="item_selected" from="Control/HSplit0/HSplit2/SchemaMemoryTable" to="." method="_on_SchemaMemoryTable_item_selected"]
+[connection signal="cell_selected" from="Control/HSplit0/HSplit2/VSplit2/SaveTable" to="." method="_on_SaveTable_cell_selected"]
+[connection signal="item_selected" from="Control/HSplit0/HSplit2/VSplit2/SchemaTable" to="." method="_on_SchemaTable_item_selected"]

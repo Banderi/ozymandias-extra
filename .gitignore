@@ -1,2 +1,32 @@
 
 *.ods#
+
+*.lnk
+
+# Godot-specific ignores
+build/
+.import/
+**/*.*.import
+*.lnk
+*.zip
+export.cfg
+export_presets.cfg
+
+# Mono-specific ignores
+.mono/
+
+# IDE data
+.kdev4
+*.kdev4
+.vs
+.vscode
+/CMakeSettings.json
+.externalNativeBuild
+.idea
+.cxx
+
+# Build output and data directories
+build*/
+out/
+cmake-build-debug/
+cmake-build-release/
